@@ -1,21 +1,16 @@
 package vehicle;
 
 public abstract class GasPoweredCar extends Car {
-    String carMake;
-    String carModel;
-    double mileage;
     double milesPerGallon;
     double maxFuel;
     double currentFuel;
     /** Note: Start with a full tank of gas
     @throws IllegalArgumentException if mpg or fuelCapacityGallons arenon-positive. */
     public GasPoweredCar(String make, String model, double startingMileage, double mpg, double fuelCapacityGallons) {
+        super(make,model,startingMileage);
         if (mpg <= 0 || fuelCapacityGallons <= 0) {
             throw new IllegalArgumentException();
         }
-        carMake = make;
-        carModel = model;
-        mileage = startingMileage;
         milesPerGallon = mpg;
         maxFuel = fuelCapacityGallons;
         currentFuel = fuelCapacityGallons;
