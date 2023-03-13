@@ -26,9 +26,10 @@ public abstract class GasPoweredCar extends Car {
     @throws IllegalArgumentException if miles is negative.
     @throws IllegalArgumentException if miles is too high given thecurrent fuel.*/
     public void drive(double miles) {
-        if (miles < 0 || getRemainingRange() < miles) {
-            throw new IllegalArgumentException();
+        if (miles < 0) {
+            throw new IllegalArgumentException("miles is negative.");
         }
+        else if (getRemainingRange() < miles) throw new IllegalArgumentException("miles is too high given the current fuel level.");
 
         decreaseFuelLevel(miles);
         mileage += miles;
@@ -64,8 +65,11 @@ public abstract class GasPoweredCar extends Car {
     @throws IllegalArgumentException if gallons is negative OR gallons
     would overfill the tank. */
     public void refillTank(double gallons) {
-        if (gallons < 0 || gallons > maxFuel-currentFuel) {
-            throw new IllegalArgumentException();
+        if (gallons < 0) {
+            throw new IllegalArgumentException("gallons is negative.");
+        }
+        else if (gallons > maxFuel-currentFuel) {
+            throw new IllegalArgumentException("gallons would overfill the tank");
         }
     }
 

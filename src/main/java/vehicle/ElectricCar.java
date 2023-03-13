@@ -28,7 +28,7 @@ public abstract class ElectricCar extends Car{
         if (miles < 0) {
             throw new IllegalArgumentException("miles is negative");
         }
-        else if (miles > milesLeft) {
+        else if (miles > getRemainingRange()) {
             throw new IllegalArgumentException("miles is greater than milesLeft");
         }
         decreaseCharge(miles);
