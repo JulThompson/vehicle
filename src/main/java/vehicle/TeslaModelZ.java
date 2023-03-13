@@ -1,6 +1,6 @@
 package vehicle;
 
-public class TeslaModelZ extends ElectricCar {
+public class TeslaModelZ extends ElectricCar implements SelfDriving{
     int modelNumber;
     /** modelNum specifies the model number. Tesla cares about that
     stuff. Tesla Model Z’s have a 340 mile range on a full charge. For a Tesla, the make is Tesla. 
@@ -32,4 +32,9 @@ public class TeslaModelZ extends ElectricCar {
     implement Car.toString()
     */
     // do not need to implement toString
+    public void driveAutonomously(double miles) {
+        if (miles < 0) throw new IllegalArgumentException("miles in driveAutonomously are negative.");
+        if (miles > milesLeft) drive(milesLeft);
+        drive(miles);
+    }
 }
