@@ -89,11 +89,18 @@ public abstract class Car {
     attempted days. The exception check should occur prior to any driving
     is attempted. */
     public int roadTrip(List<Double> milesEachDay) {
+        int daysDriven = 0;
         for (double miles: milesEachDay) {
             if (miles < 0) {
                 throw new IllegalArgumentException("Cannot drive negative miles.");
             }
+            if (canDrive(miles) == false) {
+                return daysDriven;
+            }
+            drive(miles);
+            daysDriven++;
         }
+        return daysDriven;
     }
 }
 
