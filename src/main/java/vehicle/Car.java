@@ -3,9 +3,9 @@ package vehicle;
 import java.util.List;
 
 public abstract class Car {
-    String carMake;
-    String carModel;
-    double mileage;
+    private String carMake;
+    private String carModel;
+    private double mileage;
     /** Creates a car with a starting mileage on the odometer.
     @throws IllegalArgumentException if startingMileage is negative*/
     public Car(String make, String model, double startingMileage) {
