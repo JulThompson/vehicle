@@ -19,6 +19,6 @@ public class HondaAccordian extends GasPoweredCar {
     Coding tip: Write this method to re-use the behavior of the
     superclass toString. Don’t copy-and-paste the same code here. */
     public String toString()  {
-        return year + " " + getMake() + " " + getModel() + " (" + mileage + " mi)";
+        return year + " " + getMake() + " " + getModel() + " (" + getMileage() + " mi)";
     }
 }
