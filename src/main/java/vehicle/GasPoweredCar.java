@@ -1,9 +1,9 @@
 package vehicle;
 
 public abstract class GasPoweredCar extends Car {
-    double milesPerGallon;
-    double maxFuel;
-    double currentFuel;
+    private double milesPerGallon;
+    private double maxFuel;
+    private double currentFuel;
     /** Note: Start with a full tank of gas
     @throws IllegalArgumentException if mpg or fuelCapacityGallons arenon-positive. */
     public GasPoweredCar(String make, String model, double startingMileage, double mpg, double fuelCapacityGallons) {
@@ -32,7 +32,7 @@ public abstract class GasPoweredCar extends Car {
         else if (getRemainingRange() < miles) throw new IllegalArgumentException("miles is too high given the current fuel level.");
 
         decreaseFuelLevel(miles);
-        mileage += miles;
+        addMileage(miles);
     }
 
     /** Returns how many miles can be driven on one gallon of gas. */

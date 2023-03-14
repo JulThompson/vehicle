@@ -1,7 +1,7 @@
 package vehicle;
 
 public class HondaAccordian extends GasPoweredCar {
-    int year;
+    private int year;
     /** modelYear specifies the year this car was made. Honda cares about
     that stuff. All Honda Accordian models have 14.5 gallon tanks and
     33.2 MPG. */
@@ -19,6 +19,6 @@ public class HondaAccordian extends GasPoweredCar {
     Coding tip: Write this method to re-use the behavior of the
     superclass toString. Don’t copy-and-paste the same code here. */
     public String toString()  {
-        return year + " " + getMake() + " " + getModel() + " (" + mileage + " mi) ";
+        return year + " " + getMake() + " " + getModel() + " (" + getMileage() + " mi) ";
     }
 }
