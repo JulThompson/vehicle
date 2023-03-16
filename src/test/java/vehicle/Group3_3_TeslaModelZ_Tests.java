@@ -55,6 +55,9 @@ public class Group3_3_TeslaModelZ_Tests {
         assertThrows(IllegalArgumentException.class, () -> {
             tesla.drive(341);
         }, "Driving past empty.");
+        assertThrows(IllegalArgumentException.class, () -> {
+            tesla.drive(-1);
+        }, "Cannot autonomously drive negative miles.");
         tesla.driveAutonomously(341);
         assertEquals(tesla.getMileage(), 680, 0.1, "Mileage does not match autonomously driven distance");
     }
