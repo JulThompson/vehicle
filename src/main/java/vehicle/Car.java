@@ -50,7 +50,7 @@ public abstract class Car {
     number, ".0" should still display.
     */
     public String toString() {
-        return carMake + " " + carModel + " (" + mileage + " mi)";
+        return String.format("%s %s (%.1f mi)",carMake,carModel,mileage);
     }
 
     /** Returns how many miles have been driven so far (odometer). */

@@ -71,6 +71,7 @@ public abstract class GasPoweredCar extends Car {
         else if (gallons > maxFuel-currentFuel) {
             throw new IllegalArgumentException("gallons would overfill the tank");
         }
+        currentFuel = maxFuel;
     }
 
     /** Decreases the amount of fuel in the gas tank based upon
