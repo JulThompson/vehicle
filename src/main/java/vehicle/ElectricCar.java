@@ -32,6 +32,7 @@ public abstract class ElectricCar extends Car{
             throw new IllegalArgumentException("miles is greater than milesLeft");
         }
         decreaseCharge(miles);
+        addMileage(miles);
     }
 
     /** Returns how many more miles the car can currently go without

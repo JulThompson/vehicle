@@ -32,7 +32,7 @@ public abstract class Car {
         if (miles < 0) {
             throw new IllegalArgumentException("Cannot drive negative miles.");
         }
-        if (miles < getRemainingRange()) {
+        if (miles <= getRemainingRange()) {
             return true;
         } else {
             return false;

@@ -46,7 +46,7 @@ public class Group3_3_TeslaModelZ_Tests {
         assertEquals(tesla.getMileage(), 30, 0.1, "Mileage does not match distance driven.");
         tesla.drive(200);
         assertEquals(tesla.getMileage(), 230, 0.1, "Mileage does not match distance driven.");
-        assertEquals(tesla.getRemainingRange(), 340, 0.1, "Remaining range after drive incorrect.");
+        assertEquals(tesla.getRemainingRange(), 110, 0.1, "Remaining range after drive incorrect.");
         assertEquals(tesla.canDrive(111), false, "Should be false, cannot drive that distance.");
         assertEquals(tesla.canDrive(110), true, "Should be true, possible distance to drive.");
         tesla.drive(110);
