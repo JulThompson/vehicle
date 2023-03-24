@@ -17,7 +17,8 @@ public class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying 
             throw new IllegalArgumentException("Cannot drive negative miles.");
         }
         if (getRemainingRange() / 2 < miles) {
-            drive(getRemainingRange() / 2);
+            addMileage(getRemainingRange() / 2);
+            decreaseFuelLevel(getRemainingRange());
         } else {
             decreaseFuelLevel(miles * 2);
             addMileage(miles);
