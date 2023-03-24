@@ -78,6 +78,6 @@ public class Group3_3_FordFrivolous_Tests {
             ford.fly(-1);
         }, "Flying -1 should fail.");
         ford.fly(157);
-        assertEquals(ford.getMileage(),865,0.1,"Mileage should be 865 after driveAutonomously.");
+        assertEquals(ford.getMileage(),708,0.1,"Mileage should be 865 after driveAutonomously.");
     }
 }

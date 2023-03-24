@@ -37,6 +37,5 @@ public class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying 
             throw new IllegalArgumentException("Distance not within car's range.");
         }
         decreaseFuelLevel(miles * 3);
-        addMileage(miles);
     }
 }
