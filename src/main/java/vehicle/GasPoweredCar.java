@@ -55,10 +55,6 @@ public abstract class GasPoweredCar extends Car {
         currentFuel = maxFuel;
     }
 
-    public void refillTank(int n) {
-        currentFuel += n;
-    }
-
     /** Returns how many more miles the car can currently go without
     refueling. */
     public double getRemainingRange() {
@@ -75,7 +71,7 @@ public abstract class GasPoweredCar extends Car {
         else if (gallons > maxFuel-currentFuel) {
             throw new IllegalArgumentException("gallons would overfill the tank");
         }
-        currentFuel = maxFuel;
+        currentFuel += gallons;
     }
 
     /** Decreases the amount of fuel in the gas tank based upon
